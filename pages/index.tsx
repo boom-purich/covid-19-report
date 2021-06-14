@@ -2,7 +2,7 @@ import styles from '@styles/Home.module.scss';
 import Head from 'next/head';
 import TodaySummaryComponent from '@components/TodaySummary';
 import SearchCountryComponent from '@components/SearchCountry';
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import axios from 'axios';
 
 const Home = ({today,country}) => {
@@ -20,7 +20,7 @@ const Home = ({today,country}) => {
   </>
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
     const url:string = process.env.NODE_ENV === 'development' ? process.env.API_URL_DEVELOPMENT : process.env.API_URL_PRODUCTION;
     const todayResponse = await axios.get(`${url}/api/summary/today`);
     const countryResponse = await axios.get(`${url}/api/summary`);

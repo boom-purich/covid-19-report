@@ -1,0 +1,137 @@
+@import "./color";
+
+.today_summary_container {
+  padding: 20px 0px 60px;
+}
+
+.header_topic {
+  font-size: 28px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+
+  @media only screen and (max-width:424px) {
+    font-size: 24px;
+  }
+}
+
+.summary_card_group {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 24px;
+  grid-auto-rows: 1fr;
+
+  @media only screen and (max-width:424px) {
+    margin-top: 28px;
+  }
+}
+
+.summary_card_container {
+  border-radius: 20px;
+  border: 1px solid rgba($color: #fff, $alpha: .3);
+  box-shadow: 3px 3px 5px 1px rgba($color: #262b33, $alpha: .5);
+  padding: 20px 28px;
+  background: $black-night;
+
+  .icon {
+    margin-right: 1rem;
+    font-size: 24px;
+  }
+}
+
+.confirm_card_container {
+  color: #74b9ff;
+}
+
+.recovered_card_container {
+    color: #55efc4;
+}
+
+.death_card_container {
+    color: #ff7675;
+}
+
+.card_topic {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 28px;
+
+  @media only screen and (max-width:424px) {
+    font-size: 24px;
+  }
+}
+
+.card_description {
+  // display: flex;
+  // flex-wrap: wrap;
+  // width: 100%;
+
+  // .new_amount,.total_amount {
+  //     width: 50%;
+  // }
+
+  .new_amount {
+    margin-bottom: 16px;
+  }
+
+  .amount_topic {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    margin-bottom: 8px;
+
+    @media only screen and (max-width:424px) {
+      font-size: 12px;
+    }
+  }
+
+  .amount_number {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 1;
+
+    @media only screen and (max-width:424px) {
+      font-size: 20px;
+    }
+  }
+
+  .total_amount {
+    // background: #fff;
+    border-radius: 20px;
+    padding: 16px 0px 12px;
+    .amount_number {
+      font-size: 28px;
+
+      @media only screen and (max-width:424px) {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.fetch_today_date_container {
+  margin-top: 20px;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  justify-content: space-between;
+  color: $yellow-rise-shine;
+
+  .separate_line {
+    width: 100%;
+    height: 1px;
+    background: rgba($color: $yellow-rise-shine, $alpha: .5);
+    margin: 0px 1rem;
+  }
+
+  .fetch_date_content {
+    white-space: nowrap;
+    
+    font-weight: 500;
+    letter-spacing: .25px;
+  }
+}
